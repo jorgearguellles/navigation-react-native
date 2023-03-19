@@ -12,7 +12,15 @@ export default function MealsOverviewScreen() {
   });
 
   function renderMealItem(itemData) {
-    return <MealItem title={itemData.item.title} />;
+    const mealItemProps = {
+      title: itemData.item.title,
+      imageUrl: itemData.item.imageUrl,
+      duration: itemData.item.duration,
+      complexity: itemData.item.complexity,
+      affordability: itemData.item.affordability,
+    };
+
+    return <MealItem {...mealItemProps} />;
   }
 
   return (
