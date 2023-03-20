@@ -14,6 +14,7 @@ export default function App() {
     headerTintColor: "white",
     contentStyle: { backgroundColor: "#3f2f25" },
   };
+
   return (
     <>
       <StatusBar style="light" />
@@ -33,8 +34,10 @@ export default function App() {
           <Stack.Screen
             name="MealsOverview"
             component={MealsOverviewScreen}
-            // options={{
-            //   title: "Name",
+            // One way to render dynamically meal title <======>
+            // options={({ route }) => {
+            //   const categoryTitle = route.params.categoryTitle;
+            //   return { title: categoryTitle };
             // }}
           />
         </Stack.Navigator>
